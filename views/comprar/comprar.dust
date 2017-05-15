@@ -1,0 +1,22 @@
+{>"layout" /}
+{<body}
+
+	{#events}
+	<title>{name_event}</title>
+	<br>
+	<br>
+
+
+	
+		    <div class="thumbnail">
+		      <img src="/image/{._id}.{extension}">
+		      <div class="caption">
+		        <h3>{name_event}</h3>
+		        <p><span class="glyphicon glyphicon glyphicon-map-marker">{location_event}</span></p>
+		        <p>{description_event}</p>
+		        <p>{starttime_event}</p>
+		      </div>
+
+		    </div>
+	{/events}
+{/body}

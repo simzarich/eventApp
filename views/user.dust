@@ -1,0 +1,12 @@
+{>"layout" /}
+	<br />
+	<br />
+	<br />
+
+
+	{#users}
+		<li>name:{namee}</li> 
+		<li>id:{_id}</li>
+
+	{/users}
+

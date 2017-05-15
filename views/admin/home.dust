@@ -1,0 +1,25 @@
+{>"layout" /}
+{<body}	
+	<br />
+	<br />
+	{#events}
+		    <div class="thumbnail">
+		      <img src="/image/{._id}.{extension}">
+		      <div class="caption">
+		        <h3>{name_event}</h3>
+		        <p><span class="glyphicon glyphicon glyphicon-map-marker">{location_event}</span></p>
+		        <p>{description_event}</p>
+		        <p>{starttime_event}</p>
+		      </div>
+	
+		      
+		      			<form method="POST" action="/delete/{.id}?_method=DELETE">
+		      				<button type="submit">Delete resource</button>
+		      			</form>
+
+					<a href="/edit/{._id}">Editar</a>
+
+		    </div>
+	{/events}
+
+{/body}

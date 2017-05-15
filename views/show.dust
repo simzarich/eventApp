@@ -1,0 +1,35 @@
+{>"layout" /}
+{<body}
+
+	{#events}
+	<title>{name_event}</title>
+	<br>
+	<br>
+	<div class="row">
+	  	<div class="col-xs-12 col-md-6">
+	  		<h2>{name_event}</h2>
+	  		<p>{location_event}</p>
+	  		<hr >
+	  		<h3>Descripcion</h3>
+	  		<p>{description_event}</p>
+	  		<p>{startdate_event}</p>
+	  		<hr >
+	  		<h3>hora de inicio:</h3>
+	  		<p>{starttime_event}</p>
+	  		<p>{creator}</p>
+	  	</div>
+
+	  	<div class="col-xs-6 col-md-6 thumbnail">
+	  		<img src="/image/{._id}.{extension}">
+
+	  	</div>
+
+	</div>
+
+
+	<iframe width="100%" height="450" frameborder="0" style="border:0"
+	  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAFFdBKE2emn3ycNZ3Asc7OnHlXTmREzkI
+	  &q={location_event}" allowfullscreen>
+	</iframe>
+	{/events}
+{/body}

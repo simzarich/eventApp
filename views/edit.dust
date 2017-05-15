@@ -1,0 +1,52 @@
+{>"layout" /}
+	<br />
+	<br />
+	{#events}
+	<div class="container">
+		<div class="well">
+		<form method="post" action="/edit/{._id}?_method=PUT" enctype="multipart/form-data">
+				  <div class="form-group">
+				    <label for="nameEvent">Nombre del evento</label>
+				    <input type="text" name="name_event"  class="form-control" id="name_event" placeholder="Nombre del evento">
+				  </div>
+
+
+				  <div class="form-group">
+				    <label for="Lugar">Lugar</label>
+				    <input type="text" name="location_event" class="form-control" id="location_event" placeholder="Lugar">
+				  </div>
+
+				   <div class="form-group">
+				    <label for="Lugar">Descripcion</label>
+				    <input type="text" name="description_event" class="form-control" id="description_event" placeholder="Descripcion">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="InputFile">Carga una imagen</label>
+				    <input type="file" name="file_event" id="file_event">
+				  </div>
+
+
+					<label for="nameEvent">Start Date
+						<div class="input-group date">
+						    <input type="text" class="form-control" name="startdate_event" />
+						</div>
+						<input type="text" id="starttime_event" name="starttime_event" class="timepicker" />
+					</label>
+
+					<label for="nameEvent">End  Date
+						<div class="input-group date">
+						    <input type="text" class="form-control" name="enddate_event" />  
+						</div>
+						<input type="text" id="endtime_event" name="endtime_event" class="timepicker" />
+					</label>
+
+			</input>
+
+		<button type="submit" class="btn btn-primary" value="save">Submit</button>
+		</form>
+
+	</div>
+	{/events}
+
+

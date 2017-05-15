@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="/css/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" href="/css/wickedpicker.css">
+	<link rel="stylesheet" href="/css/carousel.css">
+
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li ><a href="/">Home</a></li>
+					<form class="navbar-form navbar-left">
+        				<div class="form-group">
+          					<input type="text" class="form-control" placeholder="">
+        				</div>
+      				</form>
+				</ul>
+				<ul class="nav navbar-nav pull-right">
+
+					
+					<li><a href="/admin/div">Conviertete en un organizador</a></li>
+					<li><a href="#">Ayuda</a></li>
+					<li><a data-toggle="modal" data-target="#registerFormModal" href="#">Registro</a></li>
+					{#user}
+						{@eq key=user}
+							<li>{name}</li>
+						{:else}<li><a data-toggle="modal" data-target="#loginFormModal" href="#">Iniciar sesion</a></li>
+						{/eq}
+					{/user}
+					<li><a data-toggle="modal" data-target="#loginFormModal" href="#">Iniciar sesion</a></li>
+				
+
+	</nav>
+	<br>
+
+	<!--LOGIN MODAL-->
+	<div class="modal fade" id="loginFormModal" tabindex="-1" role="dialog" aria-labelledby="loginformModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	    <form method="post" action="/sessions" enctype="multipart/form-data">
+		      <div class="modal-header">
+		        <h4 class="modal-title" id="myModalLabel">Iniciar Sesion</h4>
+		      </div>
+		      <div class="modal-body">
+		        	
+					  <div class="form-group">
+					    <label for="Email">Email </label>
+					    <input type="text" name="email_admin"  class="form-control" id="email_admin" placeholder="Admin Email">
+					  </div>
+					  <div class="form-group">
+					    <label for="Password">Password</label>
+					    <input type="Password" name="password_admin" class="form-control" id="password_admin" placeholder="Password">
+					  </div>		  	
+
+
+			      <div class="modal-footer">
+			       	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			      	<button type="submit" class="btn btn-primary" value="Iniciar sesion">Iniciar sesion</button>
+			      	<a href="/auth/facebook">Login with Facebook</a>
+			      </div>
+			    </div>
+		    </form>
+		  </div>
+		</div>
+	</div>
+	<!--REGISTER MODAL-->
+	<div class="modal fade" id="registerFormModal" tabindex="-1" role="dialog" aria-labelledby="registerformModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	    <form method="post" action="/newadmin" enctype="multipart/form-data">
+		      <div class="modal-header">
+		        <h4 class="modal-title" id="myModalLabel">Iniciar Sesion</h4>
+		      </div>
+		      <div class="modal-body">
+				<div class="form-group">
+				    <label for="Email">Email </label>
+				    <input type="text" name="email_admin"  class="form-control" id="email_admin" placeholder="Admin Email">
+				</div>
+
+
+				<div class="form-group">
+				    <label for="password_admin">Password</label>
+				    <input type="password" name="password_admin" class="form-control" id="password_admin" placeholder="Password">
+				  </div>
+
+				<div class="form-group">
+				    <label for="password_confirmation">Password confirmation</label>
+				    <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" placeholder="password confirmation">
+				</div>
+
+
+			      <div class="modal-footer">
+			      	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			      	<button type="submit" class="btn btn-primary" value="Iniciar sesion">Iniciar sesion</button>
+			      </div>
+			    </div>
+		    </form>
+		  </div>
+		</div>
+	</div>
+	
+
+	{+body /}
+
+
+	 <hr >
+	 <div class="container">
+      <footer>
+      	<br>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>  &copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p class="pull-right"><a href="/logout">Cerrar Sesion</a></p>
+      </footer>
+      </div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="/js/jquery-3.1.1.min.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/bootstrap-datepicker.min.js"></script>
+	<script src="/js/main.js"></script>
+	<script src="/js/wickedpicker.js"></script>
+	
+</body>
+</html>
